@@ -1,0 +1,103 @@
+[
+  {
+    "test_data": {
+      "status_code": 200,
+      "device": "test_device",
+      "json": "{blub}",
+      "sensors": "mock_sensor"
+    },
+    "asserts": {
+      "init_sensor_len": 0,
+      "after_sensor_len": 0,
+      "throw_connection_err": false
+    }
+  },
+  {
+    "test_data": {
+      "status_code": 200,
+      "device": "test_device_with_sensor",
+      "json": "{blub}",
+      "sensors": "mock_sensor"
+    },
+    "asserts": {
+      "init_sensor_len": 1,
+      "after_sensor_len": 0,
+      "throw_connection_err": false
+    }
+  },
+  {
+    "test_data": {
+      "status_code": 404,
+      "device": "test_device",
+      "json": {
+        "error": "a random error"
+      },
+      "sensors": "mock_sensor"
+    },
+    "asserts": {
+      "init_sensor_len": 0,
+      "after_sensor_len": 0,
+      "throw_connection_err": true
+    }
+  },
+  {
+    "test_data": {
+      "status_code": 404,
+      "device": "test_device_with_sensor",
+      "json": {
+        "error": "device testdevice sensor id mocksensor not registered"
+      },
+      "sensors": "mock_sensor"
+    },
+    "asserts": {
+      "init_sensor_len": 1,
+      "after_sensor_len": 0,
+      "throw_connection_err": false
+    }
+  },
+  {
+    "test_data": {
+      "status_code": 404,
+      "device": "test_device_with_sensor",
+      "json": {
+        "error": "a random error"
+      },
+      "sensors": "mock_sensor"
+    },
+    "asserts": {
+      "init_sensor_len": 1,
+      "after_sensor_len": 0,
+      "throw_connection_err": true
+    }
+  },
+  {
+    "test_data": {
+      "status_code": 404,
+      "device": "test_device_with_sensor",
+      "json": {
+        "error": "device testdevice sensor id mocksensor not registered"
+      },
+      "sensors": "mock_sensor"
+    },
+    "asserts": {
+      "init_sensor_len": 1,
+      "after_sensor_len": 0,
+      "throw_connection_err": false
+    }
+  },
+  {
+    "test_data": {
+      "status_code": 401,
+      "device": "test_device",
+      "json": {
+        "error": "a random error"
+      },
+      "sensors": "mock_sensor"
+    },
+    "asserts": {
+      "init_sensor_len": 0,
+      "after_sensor_len": 0,
+      "throw_connection_err": true
+    }
+  }
+]

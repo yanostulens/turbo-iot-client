@@ -1,0 +1,3 @@
+#!/bin/sh
+modprobe nit_buzzer
+echo "$1" > /dev/nit_buzzer

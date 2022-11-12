@@ -1,0 +1,123 @@
+default:
+  image: registry.gitlab.com/nalys-nit/traineeship/2022-ist-fall/turbo-iot-client/ci_python_docker:latest
+
+stages:
+  - docker_builds
+  - static_code_analysis
+  - unit_tests
+  - integration_tests
+  - verify_tests
+  - documentation
+  - pages
+
+ci_python_image_build:
+  stage: docker_builds
+  tags:
+    - nit-server
+  only:
+    refs:
+      - main
+    changes:
+      - docker/Dockerfile_ci_python
+  script:
+    - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER $CI_REGISTRY --password-stdin
+    - docker build -f python/docker/Dockerfile_ci_python -t ${CI_REGISTRY_IMAGE}/ci_python_docker:latest .
+    - docker push ${CI_REGISTRY_IMAGE}/ci_python_docker:latest
+
+linting_analysis:
+  stage: static_code_analysis
+  tags:
+    - docker
+  script:
+    - make -C python lint
+
+typing_analysis:
+  stage: static_code_analysis
+  tags:
+    - docker
+  script:
+    - make -C python typing
+
+unit_test:
+  stage: unit_tests
+  tags:
+    - docker
+  script:
+    - make -C python unit
+  artifacts:
+    paths:
+      - ./python/reports/unit_coverage
+    expire_in: 20 minutes
+
+integration_test:
+  stage: integration_tests
+  tags:
+    - docker
+  script:
+    - make -C python integration
+  artifacts:
+    paths:
+      - ./python/reports/integration_coverage
+    expire_in: 20 minutes
+
+on_success:
+  stage: verify_tests
+  tags:
+    - docker
+  only:
+    refs:
+      - main
+  before_script:
+    - echo
+  when: on_success
+  script:
+    - cp ./python/reports/pass.png ./python/reports/favicon.png 
+  artifacts:
+    paths:
+      - ./python/reports/favicon.png
+    expire_in: 20 minutes
+
+
+on_failure:
+  stage: verify_tests
+  tags:
+    - docker
+  only:
+    refs:
+      - main
+  when: on_failure
+  script:
+    - cp ./python/reports/fail.png ./lab02/reports/favicon.png 
+  artifacts:
+    paths:
+      - ./python/reports/favicon.png
+    expire_in: 20 minutes
+
+documentation:
+  stage: documentation
+  tags:
+    - docker
+  only:
+    refs:
+      - main
+  script:
+    - make -C python docs
+  artifacts:
+    paths:
+      - ./python/doxygen/documentation
+    expire_in: 20 minutes
+
+pages:
+  stage: pages
+  tags:
+    - docker
+  only:
+    refs:
+      - main
+  script:
+    - mkdir public
+    - cp -R ./python/reports/* public
+    - cp -R ./python/doxygen/documentation public
+  artifacts:
+    paths:
+      - public

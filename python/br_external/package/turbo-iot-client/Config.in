@@ -1,0 +1,7 @@
+config BR2_PACKAGE_TURBO_IOT_CLIENT
+        bool "turbo-iot-client"
+        depends on BR2_PACKAGE_PYTHON3
+        select BR2_PACKAGE_PYTHON_PSUTIL
+        select BR2_PACKAGE_PYTHON_REQUESTS
+        help
+          Adds the turbo iot client source code to the build

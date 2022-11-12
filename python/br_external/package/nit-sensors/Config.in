@@ -1,0 +1,5 @@
+config BR2_PACKAGE_NIT_SENSORS
+    bool "nit-sensors"
+    select BR2_PACKAGE_LIBGPIOD
+    help
+        Microbus sensor drivers for nit embedded linux labs.

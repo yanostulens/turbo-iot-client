@@ -1,0 +1,13 @@
+isort
+requests_mock
+types_requests
+flake8
+mypy
+pytest
+pytest-cov
+pip-tools
+requests_mock
+types-requests
+mock
+requests_mock
+

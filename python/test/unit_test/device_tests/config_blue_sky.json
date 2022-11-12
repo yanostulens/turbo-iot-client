@@ -1,0 +1,35 @@
+{
+    "server": {
+        "hostname": "10.32.10.59",
+        "port": "8000"
+    },
+    "device": {
+        "device_id": "a_device",
+        "token": "BoTvBywIOAjhpTgoPldazUiv",
+        "sensors": [
+            {
+                "sensor_id": "storage-sens",
+                "frequency_s": 3,
+                "type": "storage",
+                "alarms": [
+                    {
+                        "alarm_id": "alarm",
+                        "description": "alarm descr",
+                        "rule": {
+                            "condition": "=",
+                            "threshold": 1
+                        },
+                        "actuators": [
+                            {
+                                "actuator_id": "buzzer",
+                                "type": "buzzer"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "frequency": "5"
+    }
+}
+

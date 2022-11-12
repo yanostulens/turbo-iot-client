@@ -1,0 +1,2 @@
+source "$BR2_EXTERNAL_nit_PATH/package/nit-sensors/Config.in"
+source "$BR2_EXTERNAL_nit_PATH/package/turbo-iot-client/Config.in"

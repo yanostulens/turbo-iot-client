@@ -1,0 +1,53 @@
+// SPDX-License-Identifier: GPL-2.0-only
+/*
+ * Copyright (C) 2012 Texas Instruments Incorporated - http://www.ti.com/
+ */
+/dts-v1/;
+
+#include "am33xx.dtsi"
+#include "am335x-bone-common.dtsi"
+#include "am335x-bonegreen-common.dtsi"
+/* #include "am335x-bone-jtag.dtsi" */
+
+/ {
+	model = "TI AM335x BeagleBone Green";
+	compatible = "ti,am335x-bone-green", "ti,am335x-bone-black", "ti,am335x-bone", "ti,am33xx";
+
+	chosen {
+		base_dtb = "am335x-bonegreen.dts";
+		base_dtb_timestamp = __TIMESTAMP__;
+	};
+
+    spi {
+        compatible = "spi-gpio";
+        #address-cells = <0x1>;
+        ranges;
+
+
+        sck-gpios = <&gpio3 14 0>; // P9_31
+        miso-gpios = <&gpio3 15 0>; // P9_29
+        mosi-gpios = <&gpio3 16 0>; // P9_30
+        cs-gpios = <&gpio3 17 0>; //  P9_28
+        num-chipselects = <1>;
+
+        gpio5: gpio5@0 {
+            compatible = "fairchild,74hc595";
+            reg = <0>;
+            gpio-controller;
+            #gpio-cells = <2>;
+            registers-number = <3>;
+            spi-max-frequency = <100000>;
+        };
+    };
+};
+
+// Analog inputs
+&tscadc {
+    status = "okay";
+    adc {
+        ti,adc-channels = <1 2 3 4>;
+        ti,chan-step-avg = <0x16 0x16 0x16 0x16>;
+        ti,chan-step-opendelay = <0x98 0x98 0x98 0x16>;
+        ti,chan-step-sampledelay = <0x0 0x0 0x0 0x0>;
+    };
+};

@@ -1,0 +1,24 @@
+[
+    {
+     "test_data": {
+            "device": "test_device",
+            "sensors": "mock_sensor"
+            },
+     "asserts": {
+            "init_sensor_len": 0,
+            "after_sensor_len": 0,
+            "throw_connection_err": false
+            }
+        },
+    {
+     "test_data": {
+            "device": "test_device_with_sensor",
+            "sensors": "mock_sensor"
+            },
+     "asserts": {
+            "init_sensor_len": 1,
+            "after_sensor_len": 0,
+            "throw_connection_err": false
+            }
+        }
+]

@@ -1,0 +1,51 @@
+default:
+  image: registry.gitlab.com/nalys-nit/traineeship/2022-ist-fall/turbo-iot-client/cpp-env:latest
+
+stages:
+  - docker_build
+  - format
+  - build
+  - unit_tests
+  - integration_tests
+
+ci_cpp_image_build:
+ stage: docker_build
+ tags:
+   - nit-server
+ only:
+   refs:
+     - main
+   changes:
+     - cpp_client/docker/Dockerfile_ci_cpp
+ script:
+   - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER $CI_REGISTRY --password-stdin
+   - docker build -f cpp_client/docker/Dockerfile_ci_cpp -t ${CI_REGISTRY_IMAGE}/cpp-env:latest .
+   - docker push ${CI_REGISTRY_IMAGE}/cpp-env:latest
+
+clang_formatting:
+  stage: format
+  tags:
+    - docker
+  script:
+    - make -C cpp_client format-check
+
+build_cpp:
+  stage: build
+  tags:
+    - docker
+  script:
+    - make -C cpp_client build
+
+unit_test:
+  stage: unit_tests
+  tags:
+    - docker
+  script:
+    - make -C cpp_client unit-all
+
+integration_test:
+  stage: integration_tests
+  tags:
+    - docker
+  script:
+    - make -C cpp_client integration

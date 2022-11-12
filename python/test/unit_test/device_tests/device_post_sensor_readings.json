@@ -1,0 +1,38 @@
+[
+  {
+    "test_data": {
+      "status_code": 200,
+      "device": "test_device"
+    },
+    "asserts": {
+      "throw_connection_err": false
+    }
+  },
+  {
+    "test_data": {
+      "status_code": 200,
+      "device": "test_device_with_sensor"
+    },
+    "asserts": {
+      "throw_connection_err": false
+    }
+  },
+  {
+    "test_data": {
+      "status_code": 200,
+      "device": "test_device_with_2_sensor"
+    },
+    "asserts": {
+      "throw_connection_err": false
+    }
+  },
+  {
+    "test_data": {
+      "status_code": 300,
+      "device": "test_device"
+    },
+    "asserts": {
+      "throw_connection_err": false
+    }
+  }
+]

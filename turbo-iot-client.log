@@ -1,0 +1,128 @@
+2022-10-27 15:41:08,964 - alarm - INFO - trigger_actuators: for alarm alarm1
+2022-10-27 15:41:08,967 - alarm - INFO - trigger_actuators: for alarm alarm2
+ocksensor
+2022-10-27 15:41:08,960 - sensor - INFO - alarm alarm3 added to sensor mocksensor
+ - WARNING - server_is_reachable: Error code 201: pong
+2022-10-27 15:41:08,658 - device - DEBUG - server_is_reachable: GET http://localhost:8000/api/service/ping
+2022-10-27 15:41:08,659 - device - WARNING - server_is_reachable: Error code 404: pong
+2022-10-27 15:41:08,661 - device - DEBUG - server_is_reachable: GET http://localhost:8000/api/service/ping
+2022-10-27 15:41:08,662 - device - WARNING - server_is_reachable: Error code 401: pong
+2022-10-27 15:41:08,664 - device - DEBUG - server_is_reachable: GET http://localhost:8000/api/service/ping
+2022-10-27 15:41:08,666 - device - WARNING - server_is_reachable: Error code 1000: pong
+2022-10-27 15:41:08,668 - device - DEBUG - server_is_reachable: GET http://10.32.10.59:8000/api/service/ping
+2022-10-27 15:41:08,671 - device - DEBUG - server_is_reachable: GET http://10.32.10.59:8000/api/service/ping
+2022-10-27 15:41:08,673 - device - WARNING - server_is_reachable: Error code 201: pong
+2022-10-27 15:41:08,674 - device - DEBUG - server_is_reachable: GET http://10.32.10.59:8000/api/service/ping
+2022-10-27 15:41:08,687 - device - WARNING - server_is_reachable: Error code 404: pong
+2022-10-27 15:41:08,690 - device - DEBUG - server_is_reachable: GET http://10.32.10.59:8000/api/service/ping
+2022-10-27 15:41:08,691 - device - WARNING - server_is_reachable: Error code 401: pong
+2022-10-27 15:41:08,693 - device - DEBUG - server_is_reachable: GET http://10.32.10.59:8000/api/service/ping
+2022-10-27 15:41:08,694 - device - WARNING - server_is_reachable: Error code 1000: pong
+2022-10-27 15:41:08,696 - device - DEBUG - fetch_properties_from_server: GET http://localhost:8000/api/devices/Test device/properties
+2022-10-27 15:41:08,700 - device - DEBUG - fetch_properties_from_server: GET http://localhost:8000/api/devices/Test device/properties
+2022-10-27 15:41:08,702 - device - ERROR - fetch_properties_from_server: Error code 201: {"Able to fetch properties": "fun"}
+2022-10-27 15:41:08,704 - device - DEBUG - fetch_properties_from_server: GET http://localhost:8000/api/devices/Test device/properties
+2022-10-27 15:41:08,705 - device - ERROR - fetch_properties_from_server: Error code 404: {"Able to fetch properties": "fun"}
+2022-10-27 15:41:08,707 - device - DEBUG - fetch_properties_from_server: GET http://localhost:8000/api/devices/Test device/properties
+2022-10-27 15:41:08,708 - device - ERROR - fetch_properties_from_server: Error code 401: {"Able to fetch properties": "fun"}
+2022-10-27 15:41:08,710 - device - DEBUG - fetch_properties_from_server: GET http://localhost:8000/api/devices/Test device/properties
+2022-10-27 15:41:08,711 - device - ERROR - fetch_properties_from_server: Error code 1000: {"Able to fetch properties": "fun"}
+2022-10-27 15:41:08,713 - device - DEBUG - fetch_properties_from_server: GET http://10.32.10.59:8000/api/devices/Test device on server/properties
+2022-10-27 15:41:08,717 - device - DEBUG - fetch_properties_from_server: GET http://10.32.10.59:8000/api/devices/Test device on server/properties
+2022-10-27 15:41:08,719 - device - ERROR - fetch_properties_from_server: Error code 201: {"Able to fetch properties": "fun"}
+2022-10-27 15:41:08,721 - device - DEBUG - fetch_properties_from_server: GET http://10.32.10.59:8000/api/devices/Test device on server/properties
+2022-10-27 15:41:08,722 - device - ERROR - fetch_properties_from_server: Error code 404: {"Able to fetch properties": "fun"}
+2022-10-27 15:41:08,724 - device - DEBUG - fetch_properties_from_server: GET http://10.32.10.59:8000/api/devices/Test device on server/properties
+2022-10-27 15:41:08,725 - device - ERROR - fetch_properties_from_server: Error code 401: {"Able to fetch properties": "fun"}
+2022-10-27 15:41:08,727 - device - DEBUG - fetch_properties_from_server: GET http://10.32.10.59:8000/api/devices/Test device on server/properties
+2022-10-27 15:41:08,728 - device - ERROR - fetch_properties_from_server: Error code 1000: {"Able to fetch properties": "fun"}
+2022-10-27 15:41:08,730 - device - DEBUG - fetch_properties_from_server: GET http://localhost:8000/api/devices/Test device/properties
+2022-10-27 15:41:08,734 - device - DEBUG - fetch_properties_from_server: GET http://10.32.10.59:8000/api/devices/Test device on server/properties
+2022-10-27 15:41:08,737 - device - DEBUG - fetch_properties_from_server: GET http://localhost:8000/api/devices/Test device/properties
+2022-10-27 15:41:08,739 - device - DEBUG - patch_reported_properties: PUT http://localhost:8000/api/devices/Test device/properties, args {'desired': {'version': 10}, 'reported': {'version': 1000}}
+2022-10-27 15:41:08,742 - device - DEBUG - fetch_properties_from_server: GET http://localhost:8000/api/devices/Test device/properties
+2022-10-27 15:41:08,743 - device - DEBUG - patch_reported_properties: PUT http://localhost:8000/api/devices/Test device/properties, args {'desired': {'version': 10}, 'reported': {'version': 1000}}
+2022-10-27 15:41:08,746 - device - DEBUG - fetch_properties_from_server: GET http://localhost:8000/api/devices/Test device/properties
+2022-10-27 15:41:08,747 - device - DEBUG - patch_reported_properties: PUT http://localhost:8000/api/devices/Test device/properties, args {'desired': {'version': 10}, 'reported': {'new_property': 1000}}
+2022-10-27 15:41:08,751 - device - DEBUG - fetch_properties_from_server: GET http://localhost:8000/api/devices/Test device/properties
+2022-10-27 15:41:08,753 - device - DEBUG - patch_reported_properties: PUT http://localhost:8000/api/devices/Test device/properties, args {'desired': {'version': 10}, 'reported': {'version': 20, 'new_property': 1000}}
+2022-10-27 15:41:08,757 - device - DEBUG - fetch_properties_from_server: GET http://10.32.10.59:8000/api/devices/Test device on server/properties
+2022-10-27 15:41:08,758 - device - DEBUG - patch_reported_properties: PUT http://10.32.10.59:8000/api/devices/Test device on server/properties, args {'desired': {'version': 10}, 'reported': {'version': 1000}}
+2022-10-27 15:41:08,761 - device - DEBUG - fetch_properties_from_server: GET http://10.32.10.59:8000/api/devices/Test device on server/properties
+2022-10-27 15:41:08,763 - device - DEBUG - patch_reported_properties: PUT http://10.32.10.59:8000/api/devices/Test device on server/properties, args {'desired': {'version': 10}, 'reported': {'version': 1000}}
+2022-10-27 15:41:08,766 - device - DEBUG - fetch_properties_from_server: GET http://10.32.10.59:8000/api/devices/Test device on server/properties
+2022-10-27 15:41:08,768 - device - DEBUG - patch_reported_properties: PUT http://10.32.10.59:8000/api/devices/Test device on server/properties, args {'desired': {'version': 10}, 'reported': {'new_property': 1000}}
+2022-10-27 15:41:08,772 - device - DEBUG - fetch_properties_from_server: GET http://10.32.10.59:8000/api/devices/Test device on server/properties
+2022-10-27 15:41:08,773 - device - DEBUG - patch_reported_properties: PUT http://10.32.10.59:8000/api/devices/Test device on server/properties, args {'desired': {'version': 10}, 'reported': {'version': 20, 'new_property': 1000}}
+2022-10-27 15:41:08,776 - device - INFO - trigger_alarm: triggering alarm alarm_01
+2022-10-27 15:41:08,776 - device - DEBUG - trigger_alarm: POST /api/devices/Test device/alarms
+2022-10-27 15:41:08,779 - device - INFO - trigger_alarm: triggering alarm alarm_02
+2022-10-27 15:41:08,779 - device - DEBUG - trigger_alarm: POST /api/devices/Test device on server/alarms
+2022-10-27 15:41:08,783 - device - DEBUG - list_triggered_alarms: GET http://localhost:8000/api/devices/Test device/alarms
+2022-10-27 15:41:08,787 - device - DEBUG - list_triggered_alarms: GET http://10.32.10.59:8000/api/devices/Test device on server/alarms
+2022-10-27 15:41:08,790 - device - INFO - resolve_alarm: resolving alarm alarm_01
+2022-10-27 15:41:08,790 - device - DEBUG - resolve_alarm: GET http://localhost:8000/api/devices/Test device/alarms/alarm_01
+2022-10-27 15:41:08,793 - device - INFO - resolve_alarm: resolving alarm alarm_02
+2022-10-27 15:41:08,793 - device - DEBUG - resolve_alarm: GET http://10.32.10.59:8000/api/devices/Test device on server/alarms/alarm_02
+2022-10-27 15:41:08,812 - device - INFO - send_message: sending message: Hello World!
+2022-10-27 15:41:08,813 - device - DEBUG - send_message: POST http://localhost:8000/api/devices/fake_device/messages
+2022-10-27 15:41:08,816 - device - INFO - send_message: sending message: {'subject': 'test', 'content': 'Hello World!'}
+2022-10-27 15:41:08,817 - device - DEBUG - send_message: POST http://localhost:8000/api/devices/fake_device/messages
+2022-10-27 15:41:08,821 - device - INFO - send_message: sending message: Hello World!
+2022-10-27 15:41:08,821 - device - DEBUG - send_message: POST http://localhost:8000/api/devices/fake_device/messages
+2022-10-27 15:41:08,823 - device - ERROR - send_message: Error code 404: {"device_id": "fake_device", "payload": "Hello World!"}
+2022-10-27 15:41:08,825 - device - INFO - send_message: sending message: {'subject': 'test', 'content': 'Hello World!'}
+2022-10-27 15:41:08,825 - device - DEBUG - send_message: POST http://localhost:8000/api/devices/fake_device/messages
+2022-10-27 15:41:08,828 - device - ERROR - send_message: Error code 404: {"device_id": "fake_device", "payload": {"subject": "test", "content": "Hello World!"}}
+2022-10-27 15:41:08,831 - device - DEBUG - receive_messages: GET http://localhost:8000/api/devices/fake_device/messages
+2022-10-27 15:41:08,834 - device - INFO - receive_messages: received: {'device_id': 'device1', 'payload': 'Hello World!', 'timestamp': '2022-09-27T07:16:25.373638'}
+2022-10-27 15:41:08,836 - device - DEBUG - receive_messages: GET http://localhost:8000/api/devices/fake_device/messages
+2022-10-27 15:41:08,839 - device - ERROR - receive_messages: Error code 404: 
+2022-10-27 15:41:08,905 - device - INFO - add_sensor: adding sensor mocksensor
+2022-10-27 15:41:08,905 - device - DEBUG - add_sensor: POST http://localhost:8000/api/devices/testdevice/sensors
+2022-10-27 15:41:08,907 - device - INFO - add_sensor: sensor mocksensor posted to server
+2022-10-27 15:41:08,909 - device - INFO - add_sensor: adding sensor mocksensor
+2022-10-27 15:41:08,909 - device - DEBUG - add_sensor: POST http://localhost:8000/api/devices/testdevice/sensors
+2022-10-27 15:41:08,911 - device - INFO - add_sensor: sensor mocksensor posted to server
+2022-10-27 15:41:08,911 - device - WARNING - add_sensor: sensor mocksensor already present on device
+2022-10-27 15:41:08,912 - device - INFO - add_sensor: adding sensor mocksensor
+2022-10-27 15:41:08,913 - device - DEBUG - add_sensor: POST http://localhost:8000/api/devices/testdevice/sensors
+2022-10-27 15:41:08,914 - device - WARNING - add_sensor: sensor mocksensor was already registered
+2022-10-27 15:41:08,916 - device - INFO - add_sensor: adding sensor mocksensor
+2022-10-27 15:41:08,916 - device - DEBUG - add_sensor: POST http://localhost:8000/api/devices/testdevice/sensors
+2022-10-27 15:41:08,918 - device - WARNING - add_sensor: sensor mocksensor was already registered
+2022-10-27 15:41:08,918 - device - WARNING - add_sensor: sensor mocksensor already present on device
+2022-10-27 15:41:08,920 - device - INFO - add_sensor: adding sensor mocksensor
+2022-10-27 15:41:08,920 - device - DEBUG - add_sensor: POST http://localhost:8000/api/devices/testdevice/sensors
+2022-10-27 15:41:08,921 - device - ERROR - add_sensor: Error code 404: {"error": "a random error"}
+2022-10-27 15:41:08,923 - device - INFO - add_sensor: adding sensor mocksensor
+2022-10-27 15:41:08,923 - device - DEBUG - add_sensor: POST http://localhost:8000/api/devices/testdevice/sensors
+2022-10-27 15:41:08,924 - device - ERROR - add_sensor: Error code 401: {"error": "a random error"}
+2022-10-27 15:41:08,925 - device - INFO - remove_sensor: removing sensor mocksensor
+2022-10-27 15:41:08,925 - device - DEBUG - add_sensor: DELETE http://localhost:8000/api/devices/testdevice/sensors/mocksensor
+2022-10-27 15:41:08,926 - device - INFO - remove_sensor: Sensor mocksensor removed
+2022-10-27 15:41:08,928 - device - INFO - remove_sensor: removing sensor mocksensor
+2022-10-27 15:41:08,928 - device - DEBUG - add_sensor: DELETE http://localhost:8000/api/devices/testdevice/sensors/mocksensor
+2022-10-27 15:41:08,929 - device - INFO - remove_sensor: Sensor mocksensor removed
+2022-10-27 15:41:08,931 - device - INFO - remove_sensor: removing sensor mocksensor
+2022-10-27 15:41:08,931 - device - DEBUG - add_sensor: DELETE http://localhost:8000/api/devices/testdevice/sensors/mocksensor
+2022-10-27 15:41:08,932 - device - ERROR - remove_sensor: Error code 404: {"error": "a random error"}
+2022-10-27 15:41:08,934 - device - INFO - remove_sensor: removing sensor mocksensor
+2022-10-27 15:41:08,934 - device - DEBUG - add_sensor: DELETE http://localhost:8000/api/devices/testdevice/sensors/mocksensor
+2022-10-27 15:41:08,936 - device - WARNING - remove_sensor: Sensor mocksensor not registered
+2022-10-27 15:41:08,937 - device - INFO - remove_sensor: removing sensor mocksensor
+2022-10-27 15:41:08,937 - device - DEBUG - add_sensor: DELETE http://localhost:8000/api/devices/testdevice/sensors/mocksensor
+2022-10-27 15:41:08,939 - device - ERROR - remove_sensor: Error code 404: {"error": "a random error"}
+2022-10-27 15:41:08,940 - device - INFO - remove_sensor: removing sensor mocksensor
+2022-10-27 15:41:08,940 - device - DEBUG - add_sensor: DELETE http://localhost:8000/api/devices/testdevice/sensors/mocksensor
+2022-10-27 15:41:08,941 - device - WARNING - remove_sensor: Sensor mocksensor not registered
+2022-10-27 15:41:08,942 - device - INFO - remove_sensor: removing sensor mocksensor
+2022-10-27 15:41:08,942 - device - DEBUG - add_sensor: DELETE http://localhost:8000/api/devices/testdevice/sensors/mocksensor
+2022-10-27 15:41:08,944 - device - ERROR - remove_sensor: Error code 401: {"error": "a random error"}
+2022-10-27 15:41:08,946 - device - DEBUG - post_sensor_readings: PUT http://localhost:8000/api/devices/testdevice/sensors/mocksensor, data: {'apples': 1}
+2022-10-27 15:41:08,951 - device - DEBUG - post_sensor_readings: PUT http://localhost:8000/api/devices/testdevice/sensors/mocksensor, data: {'apples': 1}
+2022-10-27 15:41:08,954 - device - DEBUG - post_sensor_readings: PUT http://localhost:8000/api/devices/testdevice/sensors/mocksensor, data: {'apples': 1}
+2022-10-27 15:41:08,961 - device - INFO - trigger_alarm: triggering alarm alarm1
+2022-10-27 15:41:08,961 - device - DEBUG - trigger_alarm: POST /api/devices/testdevice/alarms
+2022-10-27 15:41:08,964 - device - INFO - resolve_alarm: resolving alarm alarm2
+2022-10-27 15:41:08,964 - device - DEBUG - resolve_alarm: GET http://localhost:8000/api/devices/testdevice/alarms/alarm2

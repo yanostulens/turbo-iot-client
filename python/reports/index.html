@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turbo IOT Client Test reports</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+    h1 {
+        font-size: 72px;
+    }
+
+    p {
+        font-size: 32px;
+    }
+
+    a {
+        text-emphasis: none;
+        text-decoration: none;
+        color: black;
+    }
+
+    canvas {
+        position: fixed;
+        top: 300px;
+        left: 0;
+        z-index: -100;
+    }
+
+    body {
+        font-family: "montserrat";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .report-buttons {
+        font-weight: bold;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        margin-top: 50px;
+        color: black;
+    }
+
+    .btn {
+        font-size: 32px;
+        border: 4px solid orange;
+        padding: 30px;
+        background-color: white;
+    }
+
+    .btn:hover {
+        background-color: orange;
+        color: white;
+    }
+
+    .intro {
+        width: 600px;
+        text-align: center;
+    }
+
+</style>
+
+<body>
+    <h1>Welcome!</h1>
+    <p class="intro">This is the landing page for the test reports of the Turbo IOT client application developed by
+        the NIT'ers of 2022. Please pick
+        a report below:</p>
+    <div class="report-buttons">
+        <a class="btn" href="./documentation/html/index.html">Documentation</a>
+        <a class="btn" href="./unit_coverage/index.html">Unit coverage</a>
+        <a class="btn" href="./integration_coverage/index.html">Integration coverage</a>
+    </div>
+</body>
+
+</html>

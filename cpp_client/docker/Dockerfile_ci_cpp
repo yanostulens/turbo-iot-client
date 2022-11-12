@@ -1,0 +1,15 @@
+FROM ubuntu:22.04
+
+RUN apt update -y && \
+    apt install make g++ gdb openssl libssl-dev libcpprest-dev clang-format cppcheck valgrind cmake git -y
+
+RUN git clone https://github.com/google/googletest.git
+RUN mkdir googletest/build
+
+WORKDIR /googletest/build
+
+RUN cmake .. \
+    && make \
+    && make install
+
+    

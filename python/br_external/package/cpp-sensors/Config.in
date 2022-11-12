@@ -1,0 +1,5 @@
+config BR2_PACKAGE_CPP_SENSORS
+    bool "cpp-sensors"
+    select BR2_PACKAGE_LIBGPIOD
+    help
+        Drivers for the nit-sensors written in cpp

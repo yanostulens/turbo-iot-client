@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# Start the turbo_client
+#
+
+case "$1" in
+  start)
+	printf "Starting turbo_client: "
+    cd /opt && python3 -m turbo_client -vv
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+	;;
+  stop)
+	printf "Stopping turbo_client: "
+    kill $(ps -ef | grep -v grep | grep turbo_client | awk '{print $1}')
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+	;;
+  restart|reload)
+	"$0" stop
+	"$0" start
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?
+
+

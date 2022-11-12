@@ -1,0 +1,35 @@
+{
+    "server": {
+        "hostname": "10.32.10.59",
+        "port": "8000"
+    },
+    "device": {
+        "device_id": "a_device",
+        "token": "BoTvBywIOAjhpTgoPldazUiv",
+        "sensors": [
+            {
+                "sensor_id": "temp-sensor",
+                "frequency_ms": 5,
+                "type": "temp",
+                "unit": "°C",
+                "alarms": [
+                    {
+                        "alarm_id": "hot",
+                        "description": "Fires when the when the temperature sensor goes above 28°C",
+                        "rule": {
+                            "condition": ">",
+                            "threshold": 28
+                        },
+                        "actuators": [
+                            {
+                                "actuator_id": "bargraph",
+                                "type": "bargraph"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "frequency": 5
+    }
+}
